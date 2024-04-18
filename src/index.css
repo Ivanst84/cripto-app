@@ -1,0 +1,153 @@
+:root {
+  --white: #fff;
+  --Primary: #61ecbc;
+  --black: #182339;
+}
+
+html {
+  font-size: 62.5%; /* Establece el tamaño base de la fuente en 10px (1rem = 10px) */
+}
+
+body {
+  background-image: url('public/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 60rem;
+  width: 95%;
+  margin: 2rem auto;
+}
+
+.app-title {
+  font-size: 3.8rem;
+  margin-top: 5rem;
+  color: var(--white);
+  line-height: 0.8;
+}
+
+.app-title span {
+  display: block;
+  color: var(--Primary);
+  font-size: 4.4rem;
+}
+
+.content {
+  margin-top: 5rem;
+  padding: 4rem 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form label {
+  color: var(--black);
+}
+
+.form select {
+  background-color: #ecebeb;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.8rem;
+}
+
+.form [type="submit"] {
+  background-color: var(--Primary);
+  color: var(--black);
+  padding: 1rem;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+  margin-top: 2rem;
+  margin-bottom: 2rem; /* Añade margen inferior para separación */
+  transition: background-color 300ms ease;
+}
+.form [type="submit"]:hover {
+  background-color: #4f9f8b;
+}
+
+/* Estilos para el contenedor principal del resultado */
+.result-wrapper {
+  margin-top: 5rem; /* Ajusta el margen superior para espacio adicional */
+  width: 100%;
+  max-width: 600px;
+  margin: 20 0 auto; /* Centra horizontalmente el contenedor */
+  padding: 2px;
+  border: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos para el título de la cotización */
+.result-wrapper h2 {
+  font-size: 2.4rem; /* Ajusta el tamaño de fuente */
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Estilos para el contenedor del resultado */
+.result {
+  display: flex;
+  flex-direction: column; /* Cambia a disposición de columna */
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* Espacio superior */
+}
+/* Estilos para la imagen de la criptomoneda */
+/* Estilos para la imagen de la criptomoneda (sin efecto de desenfoque inicial) */
+.crypto-image {
+  width: 150px; /* Tamaño adaptable de la imagen */
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Animación de desvanecimiento (fadeIn) */
+@keyframes fadeInAnimation {
+  from {
+    filter: blur(10px); /* Inicia con un desenfoque de 10px */
+    opacity: 0; /* Inicia con opacidad 0 (invisible) */
+  }
+  to {
+    filter: blur(0); /* Finaliza sin desenfoque (claro) */
+    opacity: 1; /* Finaliza con opacidad 1 (completamente visible) */
+  }
+}
+
+/* Estilos para aplicar la animación de desvanecimiento cuando la imagen se carga */
+.crypto-image.fadeIn {
+  animation: fadeInAnimation 1s forwards; /* Aplica la animación de desvanecimiento */
+}
+
+/* Estilos para los párrafos de información */
+.result p {
+  font-size: 1.6rem; /* Ajusta el tamaño de fuente */
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Estilos para los valores dentro de los spans */
+.result span {
+  font-weight: bold;
+  color: #007bff; /* Color azul para resaltar */
+}
